@@ -119,3 +119,13 @@ console.log('classificação IMC: ', classificacao);
 }
 }
 imc()
+
+// COLOCANDO OS VALORES DENTRO DO INPUT
+var name = "Amós";
+var sobreName = "Santos"
+
+document.querySelector('#txtNome').value = name +' '+sobreName;
+// SETANDO O DISABLE NO INPUT
+document.querySelector('#txtNome').disabled = true;
+//MUDANDO A PROPRIEDADE DO INPUT E SETANDO O READLONY ( SO LEITURA)
+document.querySelector('#txtNome1').readOnly = true;
