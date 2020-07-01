@@ -129,3 +129,14 @@ document.querySelector('#txtNome').value = name +' '+sobreName;
 document.querySelector('#txtNome').disabled = true;
 //MUDANDO A PROPRIEDADE DO INPUT E SETANDO O READLONY ( SO LEITURA)
 document.querySelector('#txtNome1').readOnly = true;
+
+
+//USANDO O WHILE
+var td = document.querySelectorAll('.aluno td');
+console.log(td);
+
+var x = 0;
+while(td[x]){
+    td[x].textContent = x + '= Alterado';
+    x++;
+}
