@@ -140,3 +140,70 @@ while(td[x]){
     td[x].textContent = x + '= Alterado';
     x++;
 }
+
+// CONSTRUTOR
+var hoje = new Date();
+console.log(hoje);
+
+var x = [0];
+function mudaArr(x){
+    // debugger
+    var y = x;
+    y.push(2);
+    x.push(3);
+    console.log('mudaX: ');
+    console.log(x);
+    console.log(y);
+}
+mudaArr(x);
+
+function mudarCor(cor){
+    console.log(this);
+    this.cor = cor;
+}
+
+var caneta1 = {
+    cor: 'red',
+    mudarCor: mudarCor
+}
+var caneta2 = {
+    cor: 'blue',
+    mudarCor: mudarCor
+}
+
+
+function Carro(preco, cor){
+    //PEGA A COR POR PARAMETRO OU FICA A COR DEFAULT BLUE
+    //PEGA O PRECO POR PARAMETRO OU FICA O PRECO DEFAULT 10
+    this.preco = preco || 10;
+    this.cor = cor || 'blue',
+    this.mudarPreco = function(preco){
+        this.preco = preco;
+    }
+}
+
+var punto = new Carro(3000, 'yellow');
+
+//SE EU CONSULTAR O NOME PUNTO NO CONSOLE DO NAVEGADOR
+// ELE TRAZ OS VALORES SETADOS ACIMA
+
+
+
+function Notebook(preco, cor){
+    var color = cor || 'black';
+    this.preco = preco || 1;
+
+    this.mudarCor = function(cor){
+        if(cor !== 'red' && cor !== 'blue' && cor !== 'green'){
+            return;
+        }
+        color = cor;
+    }
+
+    this.pegarCor = function(){
+        return color;
+    }
+}
+var dell = new Notebook(2000, 'prata');
+
+//PRECISAR DIGITAR NO CONSOLE O DELL E SUAS PROPRIEDADES
