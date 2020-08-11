@@ -207,3 +207,41 @@ function Notebook(preco, cor){
 var dell = new Notebook(2000, 'prata');
 
 //PRECISAR DIGITAR NO CONSOLE O DELL E SUAS PROPRIEDADES
+
+//CRIANDO OBJETO LITERAL
+var pessoa1 = {
+    nome: 'Silas',
+    sobrenome: 'Santos'
+};
+var pessoa2 = {
+    nome: 'Samara',
+    sobrenome: 'Dantas'
+};
+var pessoa3 = {
+    nome: 'Kalebe',
+    sobrenome: 'Dantas'
+};
+
+var pessoas = [
+    pessoa1,
+    pessoa2,
+    pessoa3
+]
+
+console.log(pessoa1.nome +' '+pessoa1.sobrenome);
+console.log(pessoa2.nome +' '+pessoa2.sobrenome);
+console.log(pessoa3.nome +' '+pessoa3.sobrenome);
+//  OU
+console.log(pessoas);
+var x = 0;
+while(pessoas[x]){
+    console.log(pessoas[x].nome + ' + ' + pessoas[x].sobrenome);
+    x++;
+}
+
+// OU
+
+for (var i = 1; i <= 3;i ++){
+    console.log(window["pessoa"+i].nome+' - '+ window["pessoa"+i].sobrenome);
+}
+
