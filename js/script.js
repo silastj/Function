@@ -245,3 +245,50 @@ for (var i = 1; i <= 3;i ++){
     console.log(window["pessoa"+i].nome+' - '+ window["pessoa"+i].sobrenome);
 }
 
+// EVENTOS DOM NIVEL 0 E 2
+
+// NIVEL 0 - TEMOS DOIS MODO
+
+            // var btn02 = document.getElementById('btn02');
+
+            // btn02.onclick = clicar();
+
+            // function clicar(){
+            //     alert('clicou');
+
+            //     return function (){
+            //         alert('clicou2');
+            //     }
+            // }
+
+// OU
+
+            // var btn02 = document.getElementById('btn02');
+
+            // btn02.onclick = clicar;
+
+            // function clicar(){
+            //     alert('clicou');
+
+            // }
+
+//NIVEL 02 É A MELHOR FORMA
+//PODEMOS ADD MAIS EVENTOS NO MESMO BTN
+
+const btn03 = document.getElementById('btn03');
+
+btn03.addEventListener('click', function(e) {
+    alert('add');
+    console.log(e);
+    e.stopPropagation();
+    console.log(e.currentTarget);
+    console.log(e.target);
+    console.log(this);
+}, true);
+
+//OBJETO EVENT
+// this e currentTarget é quem foi atrelado ao evento 
+//Temos o stopPropagation(); ele para a função de funcionar
+
+
+
