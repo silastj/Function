@@ -291,4 +291,44 @@ btn03.addEventListener('click', function(e) {
 //Temos o stopPropagation(); ele para a função de funcionar
 
 
+// DELEGAÇÃO DE EVENTOS
+
+var lis = document.querySelectorAll('li');
+console.log(lis.length);
+
+
+var x = 0;
+while(lis[x]){
+    lis[x].addEventListener('click', function () {
+        console.log('oi');
+    })
+    x++;
+}
+  
+//VALIDAÇÃO DE FORM PELO SUBMIT
+// DICA: Para não enviar a senha pelo formulario é:
+// method:'POST'
+
+(function() {
+    'use strict';
+
+    var form = document.querySelector('form')
+    var user = document.getElementById('txtUser');
+    var senha = document.getElementById('txtPass');
+    var btnLogar = document.getElementById('btnLogar');
+
+    form.addEventListener('submit', function(e) {
+        if(user.value === "" || senha.value === ''){
+            alert('Preencha todos os campos!.');
+            e.preventDefault();
+        }else{
+            
+            alert('Parabéns! o seu cadastro foi realizado!');
+   
+        }
+    });
+
+})()
+
+
 
