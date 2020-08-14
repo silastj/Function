@@ -331,4 +331,27 @@ while(lis[x]){
 })()
 
 
+var txtarea = document.getElementById('txtArea');
+
+txtarea.addEventListener('keydown', keydown);
+
+txtarea.addEventListener('keypress', keypress);
+
+txtarea.addEventListener('input', input);
+
+txtarea.addEventListener('keyup', keyup);
+
+function keydown(e){
+    console.log('keydown', this.value);
+}
+function keypress(e){
+    console.log('keypress', this.value);
+}
+function keyup(e){
+    console.log('keyup', this.value);
+}
+function input(e){
+    console.log('input', this.value);
+}
+
 
