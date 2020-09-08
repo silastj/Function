@@ -354,4 +354,22 @@ function input(e){
     console.log('input', this.value);
 }
 
+(function() {
+
+var area = document.getElementById('area');
+var maxima = area.maxLength;
+var texto = document.getElementById('resta');
+texto.textContent = maxima;
+var aparecer = document.getElementById('aparecer');
+aparecer.style.display = 'block';
+area.addEventListener('input', checkLength);
+
+function checkLength(e){
+    var nnn = this.value.length;
+    texto.textContent = maxima - nnn;
+}
+
+
+})()
+
 

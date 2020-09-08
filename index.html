@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <script src="beluga.js"></script>
     <title>Javascript</title>
 </head>
+
 <body>
     <input type="text" value="Digite" id="txtNome">
     <input type="text" value="Digite" id="txtNome1">
@@ -16,12 +18,12 @@
     <div class="container">
         <h1>Curso Javascript Completo 2018</h1>
     </div>
-    
-    
+
+
     <section>
         <div class="container">
-        
-              <h2>Média dos alunos</h2>
+
+            <h2>Média dos alunos</h2>
             <table class="table js-tabela">
                 <thead>
                     <tr>
@@ -34,16 +36,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="aluno" >
+                    <tr class="aluno">
                         <td class="aluno-nome">Gertrude</td>
                         <td class="aluno-n1">10</td>
                         <td class="aluno-n2">8.5</td>
                         <td class="aluno-n3">9</td>
-                        <td class="aluno-n4">7.5</td>	
+                        <td class="aluno-n4">7.5</td>
                         <td class="aluno-m"></td>
                     </tr>
 
-                    <tr class="aluno" >
+                    <tr class="aluno">
                         <td class="aluno-nome">Rey</td>
                         <td class="aluno-n1">5</td>
                         <td class="aluno-n2">8.5</td>
@@ -52,7 +54,7 @@
                         <td class="aluno-m"></td>
                     </tr>
 
-                    <tr class="aluno" >
+                    <tr class="aluno">
                         <td class="aluno-nome">Jessilda</td>
                         <td class="aluno-n1">8</td>
                         <td class="aluno-n2">8.5</td>
@@ -69,7 +71,7 @@
                         <td class="aluno-n4">7.5</td>
                         <td class="aluno-m"></td>
                     </tr>
-                    <tr class="aluno" >
+                    <tr class="aluno">
                         <td class="aluno-nome">Creysson</td>
                         <td class="aluno-n1">10</td>
                         <td class="aluno-n2">9.5</td>
@@ -79,13 +81,13 @@
                     </tr>
                 </tbody>
             </table>
-            
+
             <div class='quadrado'>
                 <!-- <button id="btn01" onclick="clicar()">Clicar01</button>
                 <button id="btn02">Clicar02</button> -->
                 <button id="btn03">Clicar03</button>
             </div>
-            
+
             <div class="lista">
                 <ul>
                     <li>01</li>
@@ -95,9 +97,9 @@
                 </ul>
             </div>
             <div class="area">
-                <textarea  id="txtArea" cols="30" rows="10"></textarea>
+                <textarea id="txtArea" cols="30" rows="10"></textarea>
             </div>
-        </div>	
+        </div>
     </section>
 
     <section>
@@ -110,15 +112,62 @@
         </form>
     </section>
 
+    <section>
+        <div class="textArea">
+            <h2>Text Area 2020 - CONTAGEM DE CARACTERES </h2>
+            <textarea name="area" id="area" cols="30" rows="10" maxlength="10"></textarea>
+            <div id='aparecer'>
+                <p>Espaço de caracteres até:<span id="resta"></span></p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="textAreaOne">
+            <form action="#">
+                <textarea cols="50" rows="10 readonly">Contato de Serviços prestados</textarea>
+            </form>
+            <hr>
+            <label>
+            <input type="checkbox" id="chk" checked>Li e aceito os termos desse contrato</label>
+            <hr>
+            <input type="submit" value="Continuar" id="btn"/>
+        </div>
+    </section>
+
+    <section>
+        <div class='containerBtns'>
+            <button>Button01</button>
+            <button>Button02</button>
+            <button>Button03</button>
+        </div>
+    </section>
+
     <script src="./js/script.js"></script>
     <script>
-            
-        (function(){
+        (function () {
             'use strict'
-            
-            
+            var btn = document.getElementById('btn');
+            var input = document.getElementById('chk');
+                btn.disabled = toggleBtn();
+                input.addEventListener('change', function(){
+                    btn.disabled = toggleBtn();
+                });
+
+            function toggleBtn(){
+                return !input.checked;
+            }
         })()
-        
+
+        var bb = document.getElementsByTagName('button');
+        console.log(bb);
+        for(var i = 0;i < bb.length; i++){
+            bb[i].addEventListener('click', clicou);
+        }
+        function clicou(){
+            alert(this.textContent);
+        }
     </script>
 </body>
+
 </html>
