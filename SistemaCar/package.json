@@ -1,0 +1,9 @@
+{
+  "name": "sistemacar",
+  "version": "y",
+  "description": "sistema de agencia de carros",
+  "main": "y",
+  "author": "silas",
+  "license": "MIT",
+  "type": "module"
+}

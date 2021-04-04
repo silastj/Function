@@ -1,0 +1,10 @@
+.corpo table{
+    width: 100%;
+}
+.corpo table th,
+.corpo table tr,
+.corpo table td{
+    text-align: left;
+    border:1px solid #e5e5e5;
+    padding-left: 20px;
+}
