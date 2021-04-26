@@ -169,3 +169,76 @@ const calcularFarmacia = () => {
 const fbutton = document.querySelector('#Fbutton')
 fbutton.addEventListener('click', calcularFarmacia)
 
+//CALLBACKS
+//São funções de retorno
+
+function funcaoCallback(cb){
+    console.log('novinho')
+        cb(20)
+}
+funcaoCallback(function(){
+    console.log('cb')
+})
+const funcaoConst  = (param) => {
+    console.log('parametro')
+    console.log(param)
+}
+funcaoCallback(funcaoConst)
+
+//Catching children
+//html>body>aside
+const aside = document.querySelector('#aside').parentElement// ou parentNode
+console.log(aside)
+
+const primeiroChild = document.querySelector('aside').firstElementChild
+console.log(primeiroChild)
+
+const title = document.getElementById('aside').innerHTML = 'mudou no script externo'
+console.log(title)
+
+const para = document.getElementsByClassName('paragrafo')
+console.log(para[0], para[1])
+
+const paraAll = document.querySelectorAll('.paragrafo')
+console.log(paraAll.length)
+
+function bv(){
+    const user = ' Silas'
+    const bv = document.querySelector('.bv')
+    const bvValor = document.createElement('span')
+    // bv.textContent += user PODEMOS RESCREVER O TEXTCONTENT
+    bvValor.textContent = user // PODEMOS CRIAR A TAG
+    console.log(bvValor)
+    bv.appendChild(bvValor)
+}
+bv()
+
+//INSERTBEFORE
+const one = document.querySelector('.one')
+const two = document.querySelector('.two')
+
+const oneNovo = document.createElement('div')
+const oneFilho = document.createElement('p')
+oneFilho.innerText = 'oneFilho'
+oneNovo.appendChild(oneFilho)
+console.log(oneNovo)
+
+
+one.insertBefore(oneNovo, two.firstElementChild)
+
+//PROPRIEDADE OU PROPS
+/* 
+disabled
+*/
+
+const contratoCheckbox = document.querySelector('#contrato')
+const enviar = document.querySelector('.enviar')
+console.log(enviar)
+contratoCheckbox.addEventListener('click', inputDisabled)
+
+function inputDisabled(){
+    console.log(enviar)
+    // enviar.disabled =true ? enviar.disabled = false : enviar.disabled = true
+    (contratoCheckbox.className === 'teste')? contratoCheckbox.classList.remove('teste') :contratoCheckbox.classList.add('teste')
+
+}
