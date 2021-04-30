@@ -227,18 +227,48 @@ console.log(oneNovo)
 one.insertBefore(oneNovo, two.firstElementChild)
 
 //PROPRIEDADE OU PROPS
-/* 
-disabled
-*/
+const contrato = document.querySelector('.teste')
+contrato.addEventListener('click', function(){
+    const enviar = document.querySelector('.enviar')
+    const contratoCheckbox = document.querySelector('#contrato')
+    const cc = contratoCheckbox.checked
+    cc == true? enviar.disabled = false : enviar.disabled = true
+})
 
-const contratoCheckbox = document.querySelector('#contrato')
-const enviar = document.querySelector('.enviar')
-console.log(enviar)
-contratoCheckbox.addEventListener('click', inputDisabled)
+const cole = document.querySelector('#list').getElementsByTagName('li')
+// console.log(cole);
+// document.querySelector('#list').innerHTML += '<li>Novo</li>'
+// console.log(cole);
+// document.querySelector('#list').innerHTML += '<li>Novo</li>'
+// console.log(cole);
+// document.querySelector('#list').innerHTML += '<li>Novo</li>'
 
-function inputDisabled(){
-    console.log(enviar)
-    // enviar.disabled =true ? enviar.disabled = false : enviar.disabled = true
-    (contratoCheckbox.className === 'teste')? contratoCheckbox.classList.remove('teste') :contratoCheckbox.classList.add('teste')
+const tt = document.querySelector('h2')
+const proximott = tt.nextElementSibling // PEGAR O PROXIMO
+const antestt = tt.previousElementSibling // PEGAR O ANTERIOR
+console.log(proximott, antestt);
 
-}
+const li = document.querySelector('li')
+console.log(li);
+console.log(li.parentElement.lastChild);
+console.log(li.parentElement.lastElementChild);
+console.log(li.lastElementChild.hasChildNodes()); //VERIFICA SE TEM ALGUM NÓ DENTRO
+
+
+const liLast = document.querySelector('li:last-child')
+const liAtributo = document.createAttribute('novo')
+liAtributo.value = 'novinho'
+liLast.setAttributeNode(liAtributo) //CRIANDO E SETANDO UM ATRIBUTO
+
+
+liLast.setAttribute('velho', 'velhinho') // PASSANDO DOIS PARAMETROS
+liLast.setAttribute('style', 'color:red') // PASSANDO DOIS PARAMETROS
+
+const textao = document.createTextNode('Estou incluindo um testão') //CRIANDO TEXTO
+liLast.appendChild(textao) //INCLUINDO TEXTO
+console.log(liLast);
+
+
+
+
+
