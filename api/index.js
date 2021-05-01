@@ -269,6 +269,18 @@ liLast.appendChild(textao) //INCLUINDO TEXTO
 console.log(liLast);
 
 
+const nvTag = document.createElement('h1')
+nvTag.innerText = 'Nova Tag'
+console.log(nvTag)
+const caixa = document.querySelector('#list')
 
+const pp = document.querySelector('.pp')
+console.log(pp);
+caixa.prepend(nvTag) // ANTES DA TAG QUE ESTOU SELECIONANDO - TB PODEMOS O SEGUNDO PARAMETRO
+caixa.append(nvTag) // DEPOIS DA TAG QUE ESTOU SELECIONANDO
 
+caixa.insertBefore(nvTag, pp) //INSERIANDO DEPOIS DO PP
+caixa.insertBefore(nvTag, pp.nextElementSibling) // ANTES DO PP
 
+aa = pp.cloneNode(true) // CLONANDO A TAG
+console.log(aa);
