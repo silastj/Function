@@ -2,6 +2,10 @@
    font-family: 'Roboto', sans-serif;
    list-style: none;
 }
+body{
+    display: flex;
+    flex-direction: column;
+}
 h1{
     text-align: center;
     font-size: 21px;
@@ -13,4 +17,52 @@ img{
     border-radius: 50%;
     object-fit: contain;
     box-shadow: 5px 5px 30px 5px #000;
+}
+.inserir{
+    border:5px solid;
+}
+.inserir >p{
+    background-color: #ccc;
+    padding:20px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+li {
+    padding: 15px;
+    margin: 10px;
+    border: dashed 2px #ddd;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ccc;
+    font-family: sans-serif;
+    text-align: center;
+
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    width: 80vw;
+    height: 80vh;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    padding: 15px;
+}
+
+.container>div {
+    flex-basis: 50%;
 }

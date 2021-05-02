@@ -284,3 +284,56 @@ caixa.insertBefore(nvTag, pp.nextElementSibling) // ANTES DO PP
 
 aa = pp.cloneNode(true) // CLONANDO A TAG
 console.log(aa);
+
+const span = document.createElement('span')
+span.textContent = 'Esse é um novo span'
+console.log(span);
+const ppa = document.querySelector('.pparagrafo')
+console.log(ppa);
+const ppa2 = ppa.firstElementChild.nextElementSibling
+console.log(ppa2);
+// ppa2.after(span) // INSERI ANTES 
+ppa2.before(span) //INSERI DEPOIS
+
+//INSERT
+
+const inserir = document.querySelector('.inserir')
+console.log(inserir);
+//TAG HTML
+inserir.insertAdjacentHTML('afterbegin','<b>afterbegin</b>')
+inserir.insertAdjacentHTML('beforebegin','<b>beforebegin</b>')
+inserir.insertAdjacentHTML('afterend','<b>afterend</b>')
+inserir.insertAdjacentHTML('beforeend','<b>beforeend</b>')
+//APENAS TEXT
+inserir.insertAdjacentText('beforebegin', ' <a> Link </a>')
+//INSERINDO UM ELEMENT
+const novoInserir = document.createElement('em')
+novoInserir.textContent = 'novoInserir'
+novoInserir.style.backgroundColor = 'red'
+inserir.insertAdjacentElement('beforeend', novoInserir)
+
+//REMOVE
+//caixa.remove() // não funciona no IE
+//Podemos usar o remove(), mas tem um problema de browser, então iremos usar
+//parentNode.removeChild()
+caixa.parentNode.removeChild(caixa)
+//DESAFIO
+const alvo = document.querySelector('.alvo')
+const novoLi = document.createElement('li')
+novoLi.textContent = 'item 2'
+console.log(novoLi);
+
+
+const nexLi = alvo.firstElementChild.nextElementSibling
+alvo.after(novoLi)
+nexLi.insertAdjacentElement('beforeend',novoLi)
+
+const originalLi = document.querySelector('.original')
+lastOriginal = originalLi.lastElementChild.lastElementChild
+const cloneLastLi = lastOriginal.cloneNode(true)
+cloneLastLi.innerText = 'item 0'
+console.log(lastOriginal);
+
+nexLi.insertAdjacentElement('afterbegin', cloneLastLi)
+lastOriginal.remove()
+
