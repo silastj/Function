@@ -131,3 +131,68 @@ console.log(motos);
 const inseriRemove2 = motos.splice(0,2,'motoVelha')
 console.log(inseriRemove2);
 console.log(motos);
+
+//reverse()
+//reduce()
+
+//reverse() = Ele inverte o array original e modifica o array original
+const perfumaria = ['sabonte', 'perfume', 'shampoo'];
+const lojas = [1,1,1,1,1,5]
+console.log(perfumaria.reverse());
+//reduce() = Ele retorna um unico valor ( parametros acumulador, valor atual, )
+//Podemos passar o valor de inicial agora é 0 conforme abaixo.
+//Ou podemos passar um tipo de valor( string, number, objeto)
+const loja = lojas.reduce((acumulador,atual, index, array)=> {
+    console.log(index, array)
+    return acumulador + atual
+}, 0)
+console.log('loja: '+loja);
+console.log('lojas: '+lojas);
+
+//DESAFIO
+const nomes = ['Amós','Silas','Samara']
+const letraNomes = nomes.reduce((nomes, nomeAtual)=> {
+    let primeiraLetra = nomeAtual[0]
+    nomes[primeiraLetra] ? nomes[primeiraLetra]++ : nomes[primeiraLetra] = 1
+    return nomes
+},{})
+console.log(letraNomes);
+
+//NOVO DESAFIO
+const aleatorio = [1,3,4,1,4,5,3,5,8,9]
+const aleatorioCerto = aleatorio.reduce(function(numerosUnicos,valorAtual){
+    if(numerosUnicos.indexOf(valorAtual) < 0){
+        numerosUnicos.push(valorAtual)
+    }
+    return numerosUnicos
+},[])
+console.log(aleatorioCerto)
+
+//Array.from()
+//Array.of()
+//POLYFILL => Fazer metodo array from funcionar em browser que não funciona nativamente
+
+//ARRAY FROM
+// const dadosNovo = document.querySelectorAll('p')
+const dNovo = document.querySelectorAll('p')
+console.log(dNovo);
+
+dNovo1 = Array.from(dNovo)
+console.log(dNovo1);
+
+dNovo1.map((p, i)=>{
+    console.log(p, i)
+    p.textContent = `${++i} - ${p.textContent}`
+})
+
+const ar1 = new Array('PRIMEIRO: ' + 1,2,3)
+console.log(ar1);
+
+const ar2 = Array.from(ar1)
+ar2.push(4,5)
+console.log('SEGUNDO: '+ ar2);
+
+//SPREAD OPERATOR
+//LOOP FOR OF VC FOR IN
+// DESTRUCTURING
+
