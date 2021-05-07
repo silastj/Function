@@ -178,7 +178,7 @@ const dNovo = document.querySelectorAll('p')
 console.log(dNovo);
 
 dNovo1 = Array.from(dNovo)
-console.log(dNovo1);
+console.log('dNovo1: '+dNovo1);
 
 dNovo1.map((p, i)=>{
     console.log(p, i)
@@ -195,4 +195,52 @@ console.log('SEGUNDO: '+ ar2);
 //SPREAD OPERATOR
 //LOOP FOR OF VC FOR IN
 // DESTRUCTURING
+
+//SPREAD OPERATOR OU REST OPERATOR
+// Objeto ou array seja expandido
+
+const casos = ['novo', 'velho', 'cançado']
+console.log(casos)
+console.log(...casos)
+
+const cenas = ['filme','serie' ,...casos]
+console.log(cenas);
+
+const finalDeSemana = Array.from(cenas)
+console.log(finalDeSemana);
+
+//DESTRUCTURING
+//Recuperar variaveis de uma array
+const desc = [10, 20, 30 , 40]
+
+const [valor] = desc
+console.log(valor);// TRAZ O VALOR DE 10
+
+const [moeda, ...maismoeda] = desc
+console.log(maismoeda); //TRAZ O VALOR DE 10 E OS DEMAIS
+
+const [papel, , ...maispapel] = desc
+console.log(maispapel); // TRAZ O VALOR DE 10, PULA 1 E TRAZ O RESTANTE
+
+
+//LOOP FOR OF => ELE SERVE PARA FAZER INTERAÇÃO DE ARRAY / ELE ACESSA DIRETAMENTE OS VALORES DO ARRAY
+//LOOP FOR IN => ELE SERVE PARA PERCORER OBJETOS / ELE ACESSA DIRETAMENTE OS VALORES DO ARRAY
+
+//LOOP FOR IN
+const names = ['Pedro','João', 'Matheus']
+const objNames = {
+    nome: 'Bezouro',
+    idade: 1,
+    cor: 'Preto'
+}
+
+for(let prop in objNames){
+    // console.log(prop)
+    console.log(prop+':'+objNames[prop])
+}
+
+//LOOP FOR OF
+for (iterator of names) {
+    console.log(iterator)
+}
 
