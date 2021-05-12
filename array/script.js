@@ -244,3 +244,23 @@ for (iterator of names) {
     console.log(iterator)
 }
 
+//DESAFIO
+//CRIAR DUAS FUNÇÕES SUM() E AVAREGE()
+//SOMA
+function su(){
+    // const numbers = Array.from(arguments) OUTRA FORMA DE FAZER
+    const numbers = [...arguments]
+    console.log(numbers)
+    return numbers.reduce(function(sum, atual){
+        return sum+atual
+    },0)
+}
+console.log(su(10,20,20,30,40,50))
+
+//MEDIA 
+function avarege(){
+    return su(...arguments) / arguments.length
+}
+console.log(avarege(10,20))
+
+//ES5 Antigamente
