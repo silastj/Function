@@ -274,3 +274,7 @@ ss.call(null, 10, 12) //Passa o primeiro parametro null e depois os valores
 ss.apply(null, [1,2,3,4,5]) // Passa o primeiro parametro null e depois um array
 
 
+//New Set
+const nnumeros = [0,1,2,3,4,5,6,7,1,2,3,4,5,6,7]
+const novosNumeros = new Set(nnumeros)
+console.log(novosNumeros);

@@ -80,3 +80,31 @@ console.log('chartAt(): ' + telefone.charAt(1));
 const nomeCompleto = 'Amós Silas Pereira dos Santos'
 const corta = nomeCompleto.toUpperCase().split(' ')
 console.log(corta);
+
+//DESAFIO
+//Primeiro nome retorna
+//Dois Nomes retorna o inverso
+//Três nomes retorna o inverso
+
+const names = 'Amós Silas Pereira dos Santos' //string
+const namesR = names.indexOf(' ')  //posição do corte
+const oneNames = names.slice(0, namesR) //pegando o primeiro nome
+const twoNames = names.slice(namesR+ 1) // pegando o restante dos nomes
+
+function formatarNome(){
+    namesR < 0 ? names : console.log(twoNames + ',' + oneNames)
+}
+formatarNome()
+
+//DESAFIO   
+
+function verificarLetras(){
+    const paragrafo = document.querySelector('p').innerText.length
+    const paragrafoText = document.querySelector('p').innerText
+    const trocaParagrafo = document.querySelector('p')
+    const nnn = 100
+    const ppp = 0
+    const reticencia = '...'
+    paragrafo > 100 ?  trocaParagrafo.innerText = paragrafoText.substring(0, nnn)+reticencia :  trocaParagrafo.innerText = paragrafoText.substring(0, ppp)
+}   
+verificarLetras()
