@@ -30,7 +30,6 @@ const dayDateBirthDay = dateBirthday.getDate() // dia
 const dateBirthdayMonth = dateBirthday.getMonth() //mês
 const yearDateBirthDay = dateBirthday.getFullYear() // ano
 
-
 const generalBirthday = `${dayDateBirthDay}${dateBirthdayMonth}${yearDateBirthDay}`
 console.log(generalBirthday);
 
@@ -41,10 +40,6 @@ const yearDateBirthDayCurrent = dateBirthdayCurrent.getFullYear() // ano
 
 const generalBirthdayCurrent = `${dayDateBirthDayCurrent}${dateBirthdayMonthCurrent}${yearDateBirthDayCurrent}`
 console.log(generalBirthdayCurrent);
-
-// console.log(dayDateBirthDay, dateBirthdayMonth,yearDateBirthDay);
-// console.log(dayDateBirthDayCurrent, dateBirthdayMonthCurrent,yearDateBirthDayCurrent);
-
 
 const resDay = (dayDateBirthDay - dayDateBirthDayCurrent) //dia
 console.log(resDay);
