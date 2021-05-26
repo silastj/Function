@@ -74,6 +74,36 @@ console.log(pageXOffset);
 //pageYOffset - scroll vertical
 console.log(pageYOffset);
 
+//load -- Ele é carregado quando todos os arquivos forem carregados como assets e etc
+window.addEventListener('load', function(){
+    console.log('load');
+})
+
+//DOMCotentLoaded --É carregado quando a estrutura do dom é montada
+window.addEventListener('DOMContentLoad', function(){
+    console.log('DOMContentLoad');
+})
+
+//resize
+window.addEventListener('resize', function(){
+    console.log('resize',innerWidth, innerHeight );
+})
+
+//scroll
+window.addEventListener('scroll', function(){
+    console.log('scroll', pageYOffset);
+})
+
+//unload e beforeunload -- pouco usado.
+window.addEventListener('unload', function(){
+    console.log('unload');
+})
+window.addEventListener('beforeunload', function(){
+    console.log('beforeunload');
+})
+
+
+
 
 
 
