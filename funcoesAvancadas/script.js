@@ -77,7 +77,7 @@ pp('Joaquina',30)
 //closures
 //Encadeamento de métodos ou chain
 
-//reveal pattern
+//reveal pattern - Deixar o codigo mas fechado, mais escalavel.
 const somarRevealPattern = (function(){
         let n = 10
 
@@ -110,11 +110,44 @@ const somarRevealPattern = (function(){
     
 })()
 
-somarRevealPattern.somasoma('olá').log()
+somarRevealPattern.somasoma(200).log()
 somarRevealPattern.somasoma(5).subtrair(10).log()
 somarRevealPattern.log()
 
+//Function Favtories, funcões que vai retorna objeto
 
+const gato = {
+    name:'miau',
+    Carinho(){},
+    Comer(){}
+}
 
+const doguinho = {
+    name:'toto',
+    Latir(){},
+    Lamber(){}
+}
+
+const papagaio = {
+    name:'louro',
+    Cantar(){
+        console.log('cantar');
+    },
+    Bicar(){}
+}
+papagaio.Cantar()
+
+//INICIANDO COM GETTERS
+//CONSTRUCTOR
+
+//REST OPERATOR
+const n1 =[10,20,30]
+function diversos(...n1){
+    console.log(n1.map((e) =>{
+        console.log('e'+e)
+    }));
+}
+console.log(n1);
+diversos(1,2,3,4,5,6)
 
 
