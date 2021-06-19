@@ -5,8 +5,16 @@
 
 // ES Modules roda em browser mais novos
 
-import myMod1 from './modules/mod1.js'
+import myMod1, {mod1A} from './modules/mod1.js'
+import {mod2, mod2A, PI} from './modules/mod2.js'
+import {obj,idade, name,modelo} from './modules/mod3.js'
 
 console.log('app rodando')
 const mod1 = myMod1()
+const mod2Z = mod1A()
+
+
+const mod3 = mod2()
+const mod4 = mod2A()
+console.log(PI, obj.carro, name, idade,modelo)
 
