@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "ano":  "2009",
+        "marca": "Fiat",
+        "modelo": "Punto hlx 1.8"
+    },
+    {
+        "id":2,
+        "ano":  "2022",
+        "marca": "Ford",
+        "modelo": "Fiesta ex 1.0"
+    },
+    {
+        "id":3,
+        "ano":  "2019",
+        "marca": "Volks",
+        "modelo": "Polo TSI 2.0"
+    },
+    {
+        "id":4,
+        "ano":  "2022",
+        "marca": "Honda",
+        "modelo": "HRV 1.8 flex"
+    }
+]
